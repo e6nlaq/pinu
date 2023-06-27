@@ -1,1 +1,1 @@
-# 後で追加予定
+from .lib import *
