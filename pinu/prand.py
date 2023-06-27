@@ -2,7 +2,7 @@
 
 from random import randint
 import sys
-from lib.is_num import is_num
+from pinu.lib.is_num import is_num
 
 
 def prand_run() -> None:
