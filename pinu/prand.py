@@ -1,6 +1,6 @@
 from random import randint
 import sys
-from pinu.lib.is_num import is_num
+from lib.is_num import is_num
 
 
 def run() -> None:
