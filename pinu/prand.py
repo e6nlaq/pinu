@@ -1,9 +1,11 @@
+#!/bin/env python3
+
 from random import randint
 import sys
-from pinu.lib.is_num import is_num
+from lib.is_num import is_num
 
 
-def run() -> None:
+def prand_run() -> None:
     args: list[str] = sys.argv
 
     if len(args) != 3:
@@ -27,3 +29,7 @@ def prand(a: int, b: int) -> int:
         a, b = b, a
 
     return randint(a, b)
+
+
+if __name__ == "__main__":
+    prand_run()
