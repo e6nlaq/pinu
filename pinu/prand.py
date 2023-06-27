@@ -6,14 +6,23 @@ import argparse
 
 
 def prand_run() -> None:
-    parser = argparse.ArgumentParser(description="Returns a random number")
+    if len(sys.argv) != 1:
+        parser = argparse.ArgumentParser(description="Returns a random number")
 
-    parser.add_argument("arg1", type=int, help="Random minimum")
-    parser.add_argument("arg2", type=int, help="Random maximum")
+        parser.add_argument("arg1", type=int, help="Random minimum")
+        parser.add_argument("arg2", type=int, help="Random maximum")
 
-    args = parser.parse_args()
+        args = parser.parse_args()
 
-    print(prand(args.arg1, args.arg2))
+        print(prand(args.arg1, args.arg2))
+    else:
+        try:
+            a, b = map(int, input().split(" "))
+            print(prand(a, b))
+        except ValueError:
+            print("Invalid argument")
+            return 1
+
     return 0
 
 
