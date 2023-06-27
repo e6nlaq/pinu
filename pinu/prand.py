@@ -6,12 +6,12 @@ from .is_num import is_num
 def run() -> None:
     args: list[str] = sys.argv
 
-    if len(args) != 2:
+    if len(args) != 3:
         print("Argument length must be 2")
         return 1
-    elif is_num(args[0]) and is_num(args[1]):
-        a: int = int(args[0])
-        b: int = int(args[1])
+    elif is_num(args[1]) and is_num(args[2]):
+        a: int = int(args[1])
+        b: int = int(args[2])
 
         print(prand(a, b))
         return 0
