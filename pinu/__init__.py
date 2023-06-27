@@ -1,1 +1,1 @@
-from . import prand, lib
+from . import prand
