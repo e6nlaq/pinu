@@ -2,7 +2,7 @@
 
 from random import randint
 import sys
-import pinu.lib
+from is_num import is_num
 
 
 def prand_run() -> None:
@@ -11,7 +11,7 @@ def prand_run() -> None:
     if len(args) != 3:
         print("Argument length must be 2")
         return 1
-    elif pinu.lib.is_num(args[1]) and pinu.lib.is_num(args[2]):
+    elif is_num(args[1]) and is_num(args[2]):
         a: int = int(args[1])
         b: int = int(args[2])
 
