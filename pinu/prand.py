@@ -20,10 +20,10 @@ def prand_run() -> None:
             a, b = map(int, input().split(" "))
             print(prand(a, b))
         except ValueError:
-            print("Invalid argument")
-            return 1
+            print("Error: Invalid argument")
+            exit(1)
 
-    return 0
+    exit(0)
 
 
 def prand(a: int, b: int) -> int:
