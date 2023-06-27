@@ -7,5 +7,6 @@ setup(
     description="Python is not unix.",
     author="e6nlaq",
     packages=["pinu"],
+    requires=["argparse"],
     entry_points={"console_scripts": ["prand=pinu.prand:prand_run"]},
 )

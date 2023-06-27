@@ -2,24 +2,20 @@
 
 from random import randint
 import sys
+import argparse
 from is_num import is_num
 
 
 def prand_run() -> None:
-    args: list[str] = sys.argv
+    parser = argparse.ArgumentParser(description="Returns a random number")
 
-    if len(args) != 3:
-        print("Argument length must be 2")
-        return 1
-    elif is_num(args[1]) and is_num(args[2]):
-        a: int = int(args[1])
-        b: int = int(args[2])
+    parser.add_argument("arg1", type=int, help="Random minimum")
+    parser.add_argument("arg2", type=int, help="Random maximum")
 
-        print(prand(a, b))
-        return 0
-    else:
-        print("Argument must be a number")
-        return 1
+    args = parser.parse_args()
+
+    print(prand(args.arg1, args.arg2))
+    return 0
 
 
 def prand(a: int, b: int) -> int:
