@@ -3,7 +3,6 @@
 from random import randint
 import sys
 import argparse
-from is_num import is_num
 
 
 def prand_run() -> None:
