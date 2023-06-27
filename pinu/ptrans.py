@@ -54,6 +54,7 @@ def ptrans_run() -> None:
             f.write(tmp)
             f.close()
 
+            print(tmp)
             exit(0)
         else:
             print("Error: The specified file does not exist.")
