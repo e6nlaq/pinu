@@ -1,1 +1,1 @@
-from .lib import *
+from pinu.lib.is_num import *
